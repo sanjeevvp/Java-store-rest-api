@@ -25,7 +25,7 @@ public class StoreController {
     }
 
     @RequestMapping("/item/stock/add")
-    public Response addItem(@RequestParam(value="id") int id, @RequestParam(value="stock") int newStock) {
+    public Response addNewStock(@RequestParam(value="id") int id, @RequestParam(value="stock") int newStock) {
         if(addStock(id, newStock)){
             return new Response(200, "OK", null);
         }
@@ -35,7 +35,7 @@ public class StoreController {
     }
 
     @RequestMapping("/item/stock/set")
-    public Response addItem(@RequestParam(value="id") int id, @RequestParam(value="stock") int newStock) {
+    public Response setNewStock(@RequestParam(value="id") int id, @RequestParam(value="stock") int newStock) {
         if(setStock(id, newStock)){
             return new Response(200, "OK", null);
         }
@@ -45,7 +45,7 @@ public class StoreController {
     }
 
     @RequestMapping("/item/stock/remove")
-    public Response addItem(@RequestParam(value="id") int id, @RequestParam(value="stock") int stockToRemove) {
+    public Response removeNewStock(@RequestParam(value="id") int id, @RequestParam(value="stock") int stockToRemove) {
         if(removeStock(id, stockToRemove)){
             return new Response(200, "OK", null);
         }
